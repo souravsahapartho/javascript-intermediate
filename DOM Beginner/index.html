@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour of Dom</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+
+    <style>
+      h1 {
+        color: aqua;
+      }
+      #food-title {
+        color: green;
+        /* margin-left: 20px; */
+        /* backgroundColor: lightgreen; */
+      }
+
+      .food .Foreign {
+        font-weight: 700;
+      }
+
+      .bg-red {
+        background-color: red;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .big {
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This is my header. No banner.</h1>
+    </header>
+
+    <main id="main-container">
+      <section id="old-dhaka" class="songs">
+        <h1>Welcome to my DOM></h1>
+        <p>
+          Lorem ipsum dolor <span>oli goli</span> sit amet consectetur,
+          adipisicing elit. <span>Alias</span> Praesentium, ullam?
+        </p>
+        <h1>Asfd asdf <span>Some text</span> sdfs</h1>
+        <ul>
+          <li>Shafayet</li>
+          <li class="Foreign">Bonobash</li>
+          <li id="band" class="">Jalali Set</li>
+          <li class="international">Dubai</li>
+          <li>Dom de re baba</li>
+        </ul>
+      </section>
+
+      <section class="food">
+        <h1 id="food-title">Foods I love</h1>
+        <ui>
+          <li>Rice</li>
+          <li>Potato</li>
+          <li>Fish</li>
+          <li>Lentil</li>
+          <li class="Foreign">Burger</li>
+          <li class="Foreign">Pizza</li>
+          <li class="Foreign">Pasta</li>
+        </ui>
+      </section>
+
+      <section id="players-container">
+        <h1>Players</h1>
+        <ul id="player-list">
+          <li>Messi</li>
+          <li>Ronaldo</li>
+          <li>Mbappe</li>
+          <li>Pele</li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      //   console.log("Hello from JS!!!");
+      //   console.log("Hello bole chole gelo");
+      // console.log("Document Object er file");
+
+      const student = {
+        name: "Abul mia",
+        id: 121,
+        study: function () {
+          //  console.log("Studying subject: ", subject);
+        },
+      };
+
+      // document.getElementsByTagName
+
+      const liCollection = document.getElementsByTagName("li");
+      console.log(liCollection);
+      for (const li of liCollection) {
+        // console.log(li.innerText);
+      }
+
+      //all h1 tags
+      const allHeadings = document.getElementsByTagName("h1");
+      for (const heading of allHeadings) {
+        // console.log(heading.innerText);
+      }
+
+      //get by Id
+      const foodTitleH1 = document.getElementById("food-title");
+      //  console.log(foodTitleH1.innerText);
+      foodTitleH1.innerText = "Foods I loved to eat";
+
+      const bandElement = document.getElementById("band");
+      bandElement.innerText = "Jalali Sleeping Band";
+
+      //get elements by class name
+      const foreignElements = document.getElementsByClassName("Foreign");
+      //  console.log("Foreign");
+
+      for (const element of foreignElements) {
+        //  console.log(element);
+      }
+
+      //query selector all
+      const spanElements = document.querySelectorAll("#old-dhaka p span");
+      for (const span of spanElements) {
+        // console.log(span.innerText);
+      }
+    </script>
+    <script src="JS/hello.js"></script>
+    <script src="cssinJS.js"></script>
+    <script src="child.js"></script>
+    <script src="JS/append.js"></script>
+  </body>
+</html>
